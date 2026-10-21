@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de pedidos</title>
+</head>
+<body>
+    <header>
+        <h2>Control de Pedidos</h2>
+        <nav>
+            <button onclick="ver('Inicio')">Inicio</button>
+            <button onclick="ver('Nuevo')">Nuevo Pedido</button>
+            <button onclick="ver('Monitoreo')">Estado de Pedidos</button>
+            <button onclick="ver('Clientes')">Clientes</button>
+        </nav>
+    </header>
+    <main>
+        <div id="Inicio" class="modulo activo">
+            <h1>Sistema de gestion de pedidos y entregas</h1>
+            <p> seguimiento desde la recepcion hasta el despacho del cliente.</p>
+            </div>
+            <div id = "Nuevo " class= "modulo>"
+            <h2>Registrar orden de pedidos</h2>
+            <form onsubmit="alert('Pedidos Registrado'); return false;">
+                <label>Cliente:</label><input type="text" placeholder="Cliente o Empresa" required>
+                 <label>Direccion de entrega:</label><input type="text" placeholder="Managua,Nicaragua" required>
+                  <label>Detalles del pedidos:</label><input type="text" placeholder="2x servidoes" required>
+                  <button class = "btn">Crear Orden</button>
+            </form>
+        </div>
+        <div id="Monitoreo" class="modulo">
+            <h2>Monitoreo de envio</h2>
+          <table>
+            <tr><th>orden #</th><th>cliente</th><th>estado</th><th>repartidor</th></tr>
+             <tr><th>ord-500</th><th>distribuidora sol</th><th>en preparacion</th><th>juan lopez</th></tr>
+          </table>
+        </div>
+        <div id="Clientes"  class="modulo">
+            <h2>Cliente frecuentes</h2>
+            <table>
+                <tr><th>Id</th><th>Empresa</th><th>Telefono</th></tr>
+                       <tr><td>Clic-80</td><td>Distribuidora sol</td><td>+505 84848484</td></tr>
+            
+            </table>
+        </div>
+    </main>
+    
+</body>
+</html>
